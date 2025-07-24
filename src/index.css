@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 @import 'tailwindcss';
 
 @layer {
   body {
     @apply bg-green-300;
   }
+}
+
+@theme {
+  --font-rubik: 'Rubik Mono One', sans-serif;
 }
