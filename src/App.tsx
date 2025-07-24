@@ -4,19 +4,23 @@ import MovieList from './components/MovieList';
 import SongList from './components/SongList';
 
 const App = () => {
-  const [movies, setMovies] = useState([]);
-  const [songs, setSongs] = useState([]);
+  const [movies, setMovies] = useState<string[]>([]);
+  const [songs, setSongs] = useState<string[]>([]);
 
   const handleReset = () => {
     setMovies([]);
     setSongs([]);
   };
 
-  const handleMovieAdd = () => {};
+  const handleMovieAdd = () => {
+    setMovies([...movies, 'Test']);
+  };
 
   const handleMovieRemove = () => {};
 
-  const handleSongAdd = () => {};
+  const handleSongAdd = () => {
+    setSongs([...songs, 'Test']);
+  };
 
   const handleSongRemove = () => {};
 
