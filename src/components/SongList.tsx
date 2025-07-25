@@ -1,11 +1,7 @@
 import type { FC } from 'react';
 import Button from './Button';
 
-const SongList: FC<{
-  songs: string[];
-  onAdd: () => void;
-  onRemove: (songIndex: number) => void;
-}> = ({ songs, onAdd, onRemove }) => {
+const SongList: FC = () => {
   return (
     <div className='mb-4'>
       <div className='mb-2 flex w-full items-end justify-between border-b-4 pb-2'>
