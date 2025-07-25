@@ -7,7 +7,11 @@ const moviesSlice = createSlice({
     addMovie: (state, { payload }) => {
       state.push(payload);
     },
-    removeMovie: (state, action) => {}
+    removeMovie: (state, { payload }) => {
+      return state.filter((_movie, index) => {
+        return index !== payload;
+      });
+    }
   }
 });
 

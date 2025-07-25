@@ -5,7 +5,7 @@ import Button from './Button';
 import { faker } from '@faker-js/faker';
 
 const MovieList: FC = () => {
-  const movies = useSelector(state => state.movies);
+  const movies = useSelector(({ movies }) => movies);
   const dispatch = useDispatch();
 
   const handleMovieAdd = () => {
@@ -14,13 +14,10 @@ const MovieList: FC = () => {
     dispatch(addMovie(movieName));
   };
 
-  const handleMovieRemove = (movieIndex: number) => {
-    setMovies(
-      movies.filter((_movie, index) => {
-        return index !== movieIndex;
-      })
-    );
+  const handleMovieRemove = (index: number) => {
+    dispatch(removeMovie(index));
   };
+
   return (
     <div className='mb-4'>
       <div className='mb-2 flex w-full items-end justify-between border-b-4 pb-2'>
@@ -35,7 +32,7 @@ const MovieList: FC = () => {
               className='flex items-center justify-between rounded-sm border-3 bg-green-400 p-4 shadow-[5px_5px_0_black] dark:bg-orange-400'
             >
               {movie}
-              <Button onClick={() => onRemove(index)}>Remove</Button>
+              <Button onClick={() => handleMovieRemove(index)}>Remove</Button>
             </li>
           ))}
         </ul>
