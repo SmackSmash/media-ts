@@ -1,7 +1,11 @@
 import type { FC } from 'react';
 import Button from './Button';
 
-const SongList: FC<{ songs: string[]; onAdd: () => void }> = ({ songs, onAdd }) => {
+const SongList: FC<{
+  songs: string[];
+  onAdd: () => void;
+  onRemove: (songIndex: number) => void;
+}> = ({ songs, onAdd, onRemove }) => {
   return (
     <div className='mb-4'>
       <div className='mb-2 flex w-full items-end justify-between border-b-4 pb-2'>
@@ -16,7 +20,7 @@ const SongList: FC<{ songs: string[]; onAdd: () => void }> = ({ songs, onAdd }) 
               className='flex items-center justify-between rounded-sm border-3 bg-green-400 p-4 shadow-[5px_5px_0_black] dark:bg-orange-400'
             >
               {song}
-              <Button>Remove</Button>
+              <Button onClick={() => onRemove(index)}>Remove</Button>
             </li>
           ))}
         </ul>

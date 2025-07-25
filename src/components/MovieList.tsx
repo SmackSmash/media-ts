@@ -1,7 +1,11 @@
 import type { FC } from 'react';
 import Button from './Button';
 
-const MovieList: FC<{ movies: string[]; onAdd: () => void }> = ({ movies, onAdd }) => {
+const MovieList: FC<{
+  movies: string[];
+  onAdd: () => void;
+  onRemove: (movieIndex: number) => void;
+}> = ({ movies, onAdd, onRemove }) => {
   return (
     <div className='mb-4'>
       <div className='mb-2 flex w-full items-end justify-between border-b-4 pb-2'>
@@ -16,7 +20,7 @@ const MovieList: FC<{ movies: string[]; onAdd: () => void }> = ({ movies, onAdd 
               className='flex items-center justify-between rounded-sm border-3 bg-green-400 p-4 shadow-[5px_5px_0_black] dark:bg-orange-400'
             >
               {movie}
-              <Button>Remove</Button>
+              <Button onClick={() => onRemove(index)}>Remove</Button>
             </li>
           ))}
         </ul>

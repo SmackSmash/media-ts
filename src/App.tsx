@@ -19,7 +19,13 @@ const App = () => {
     setMovies([...movies, movieName]);
   };
 
-  const handleMovieRemove = () => {};
+  const handleMovieRemove = (movieIndex: number) => {
+    setMovies(
+      movies.filter((_movie, index) => {
+        return index !== movieIndex;
+      })
+    );
+  };
 
   const handleSongAdd = () => {
     let songName = `${faker.word.adjective()} ${faker.word.noun()}`;
@@ -27,7 +33,13 @@ const App = () => {
     setSongs([...songs, songName]);
   };
 
-  const handleSongRemove = () => {};
+  const handleSongRemove = (songIndex: number) => {
+    setSongs(
+      songs.filter((_song, index) => {
+        return index !== songIndex;
+      })
+    );
+  };
 
   return (
     <div className='p-2'>
