@@ -1,25 +1,14 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
-const moviesSlice = createSlice({
-  name: 'movie',
-  initialState: [],
-  reducers: {
-    addMovie: (state, { payload }) => {
-      state.push(payload);
-    },
-    removeMovie: (state, { payload }) => {
-      return state.filter((_movie, index) => {
-        return index !== payload;
-      });
-    }
-  }
-});
+export * from './slices/moviesSlice';
+import moviesReducer from './slices/moviesSlice';
 
 const store = configureStore({
   reducer: {
-    movies: moviesSlice.reducer
+    movies: moviesReducer
   }
 });
 
-export const { addMovie, removeMovie } = moviesSlice.actions;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 export default store;

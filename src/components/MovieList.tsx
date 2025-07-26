@@ -1,12 +1,12 @@
 import type { FC } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppDispatch, useAppSelector } from '../store/hooks/hooks';
 import { addMovie, removeMovie } from '../store';
 import Button from './Button';
 import { faker } from '@faker-js/faker';
 
 const MovieList: FC = () => {
-  const movies = useSelector(({ movies }) => movies);
-  const dispatch = useDispatch();
+  const movies = useAppSelector(({ movies }: { movies: [] }) => movies);
+  const dispatch = useAppDispatch();
 
   const handleMovieAdd = () => {
     let movieName = `${faker.word.adjective()} ${faker.word.noun()}`;
