@@ -11,9 +11,7 @@ const moviesSlice = createSlice({
       state.push(payload);
     },
     removeMovie: (state, { payload }) => {
-      return state.filter((_movie, index) => {
-        return index !== payload;
-      });
+      return state.filter((_movie, index) => index !== payload);
     }
   }
 });

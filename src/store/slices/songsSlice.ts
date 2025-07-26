@@ -7,8 +7,12 @@ const songsSlice = createSlice({
   name: 'song',
   initialState,
   reducers: {
-    addSong: (state, action) => {},
-    removeSong: (state, action) => {}
+    addSong: (state, { payload }) => {
+      state.push(payload);
+    },
+    removeSong: (state, { payload }) => {
+      return state.filter((_song, index) => index !== payload);
+    }
   }
 });
 

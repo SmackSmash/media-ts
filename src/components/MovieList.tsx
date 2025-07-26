@@ -1,11 +1,11 @@
 import type { FC } from 'react';
-import { useAppDispatch, useAppSelector } from '../store/hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { addMovie, removeMovie } from '../store';
 import Button from './Button';
 import { faker } from '@faker-js/faker';
 
 const MovieList: FC = () => {
-  const movies = useAppSelector(({ movies }: { movies: [] }) => movies);
+  const movies = useAppSelector(({ movies }) => movies);
   const dispatch = useAppDispatch();
 
   const handleMovieAdd = () => {

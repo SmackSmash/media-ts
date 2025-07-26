@@ -1,25 +1,11 @@
 import Button from './components/Button';
 import MovieList from './components/MovieList';
-// import SongList from './components/SongList';
+import SongList from './components/SongList';
 
 const App = () => {
   // const handleReset = () => {
   //   setMovies([]);
   //   setSongs([]);
-  // };
-
-  // const handleSongAdd = () => {
-  //   let songName = `${faker.word.adjective()} ${faker.word.noun()}`;
-  //   songName = songName.charAt(0).toUpperCase() + songName.slice(1);
-  //   setSongs([...songs, songName]);
-  // };
-
-  // const handleSongRemove = (songIndex: number) => {
-  //   setSongs(
-  //     songs.filter((_song, index) => {
-  //       return index !== songIndex;
-  //     })
-  //   );
   // };
 
   return (
@@ -29,7 +15,7 @@ const App = () => {
         <Button>Reset lists</Button>
       </div>
       <MovieList />
-      {/* <SongList /> */}
+      <SongList />
     </div>
   );
 };
