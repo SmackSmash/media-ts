@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-type movieState = string[];
-const initialState: movieState = [];
+type MovieState = string[];
+const initialState: MovieState = [];
 
 const moviesSlice = createSlice({
   name: 'movie',

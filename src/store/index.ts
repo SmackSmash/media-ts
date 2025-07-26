@@ -3,9 +3,13 @@ import { configureStore } from '@reduxjs/toolkit';
 export * from './slices/moviesSlice';
 import moviesReducer from './slices/moviesSlice';
 
+export * from './slices/songsSlice';
+import songsReducer from './slices/songsSlice';
+
 const store = configureStore({
   reducer: {
-    movies: moviesReducer
+    movies: moviesReducer,
+    songs: songsReducer
   }
 });
 
