@@ -3,10 +3,7 @@ import MovieList from './components/MovieList';
 import SongList from './components/SongList';
 
 const App = () => {
-  // const handleReset = () => {
-  //   setMovies([]);
-  //   setSongs([]);
-  // };
+  const handleReset = () => {};
 
   return (
     <div className='p-2'>

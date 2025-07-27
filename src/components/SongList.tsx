@@ -21,7 +21,7 @@ const SongList: FC = () => {
   return (
     <div className='mb-4'>
       <div className='mb-2 flex w-full items-end justify-between border-b-4 pb-2'>
-        <h2 className='font-rubik text-2xl'>Song Playlist</h2>
+        <h2 className='font-rubik text-2xl tracking-tighter'>Song Playlist</h2>
         <Button onClick={handleSongAdd}>+ Add Song</Button>
       </div>
       {songs.length ? (

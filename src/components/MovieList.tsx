@@ -21,7 +21,7 @@ const MovieList: FC = () => {
   return (
     <div className='mb-4'>
       <div className='mb-2 flex w-full items-end justify-between border-b-4 pb-2'>
-        <h2 className='font-rubik text-2xl'>Movie Playlist</h2>
+        <h2 className='font-rubik text-2xl tracking-tighter'>Movie Playlist</h2>
         <Button onClick={handleMovieAdd}>+ Add Movie</Button>
       </div>
       {movies.length ? (

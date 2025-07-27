@@ -13,6 +13,9 @@ const moviesSlice = createSlice({
     removeMovie: (state, { payload }) => {
       return state.filter((_movie, index) => index !== payload);
     }
+  },
+  extraReducers: builder => {
+    builder.addCase('movie/reset', () => console.log('Reset'));
   }
 });
 
