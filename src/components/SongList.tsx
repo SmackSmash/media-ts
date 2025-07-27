@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { faker } from '@faker-js/faker';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { addSong, removeSong } from '../store/slices/songsSlice';
+import { addSong, removeSong } from '../store';
 import Button from './Button';
 
 const SongList: FC = () => {

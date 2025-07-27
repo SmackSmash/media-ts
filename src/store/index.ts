@@ -4,7 +4,10 @@ import { createAction } from '@reduxjs/toolkit';
 export const reset = createAction('app/reset');
 
 import moviesReducer from './slices/moviesSlice';
+export { addMovie, removeMovie } from './slices/moviesSlice';
+
 import songsReducer from './slices/songsSlice';
+export { addSong, removeSong } from './slices/songsSlice';
 
 const store = configureStore({
   reducer: {

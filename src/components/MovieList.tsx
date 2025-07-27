@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import { faker } from '@faker-js/faker';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { addMovie, removeMovie } from '../store/slices/moviesSlice';
+import { addMovie, removeMovie } from '../store';
 import Button from './Button';
 
 const MovieList: FC = () => {
