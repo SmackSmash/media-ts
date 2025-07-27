@@ -1,15 +1,21 @@
+import { useAppDispatch } from './store/hooks';
+import { reset } from './store';
 import Button from './components/Button';
 import MovieList from './components/MovieList';
 import SongList from './components/SongList';
 
 const App = () => {
-  const handleReset = () => {};
+  const dispatch = useAppDispatch();
+
+  const handleReset = () => {
+    dispatch(reset());
+  };
 
   return (
     <div className='p-2'>
       <div className='mb-4 flex items-end justify-between border-b-7 border-black pb-4'>
         <h1 className='font-rubik text-4xl tracking-tighter'>Media List</h1>
-        <Button>Reset lists</Button>
+        <Button onClick={handleReset}>Reset lists</Button>
       </div>
       <MovieList />
       <SongList />

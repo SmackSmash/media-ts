@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { reset } from '..';
 
 type SongState = string[];
 const initialState: SongState = [];
@@ -13,6 +14,11 @@ const songsSlice = createSlice({
     removeSong: (state, { payload }) => {
       return state.filter((_song, index) => index !== payload);
     }
+  },
+  extraReducers: builder => {
+    builder.addCase(reset, () => {
+      return [];
+    });
   }
 });
 

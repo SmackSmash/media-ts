@@ -1,4 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
+import { createAction } from '@reduxjs/toolkit';
+
+export const reset = createAction('app/reset');
 
 import moviesReducer from './slices/moviesSlice';
 import songsReducer from './slices/songsSlice';

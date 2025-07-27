@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { reset } from '..';
 
 type MovieState = string[];
 const initialState: MovieState = [];
@@ -15,7 +16,9 @@ const moviesSlice = createSlice({
     }
   },
   extraReducers: builder => {
-    builder.addCase('movie/reset', () => console.log('Reset'));
+    builder.addCase(reset, () => {
+      return [];
+    });
   }
 });
 
