@@ -1,5 +1,5 @@
 import { useAppDispatch } from './store/hooks';
-import { reset } from './store';
+import { reset } from './store/actions';
 import Button from './components/Button';
 import MovieList from './components/MovieList';
 import SongList from './components/SongList';

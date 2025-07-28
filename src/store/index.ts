@@ -1,7 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { createAction } from '@reduxjs/toolkit';
-
-export const reset = createAction('app/reset');
 
 import moviesReducer from './slices/moviesSlice';
 export { addMovie, removeMovie } from './slices/moviesSlice';

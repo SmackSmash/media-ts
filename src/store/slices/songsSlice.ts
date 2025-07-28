@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { reset } from '..';
+import { reset } from '../actions';
 
 type SongState = string[];
 const initialState: SongState = [];
